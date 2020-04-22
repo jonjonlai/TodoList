@@ -1,0 +1,14 @@
+<h2>TODO LIST</h2>
+
+
+<%@todos.each do |todo|%>
+    <div><%= todo.todo %></div>
+<% end %>
+
+<form action="<%= todos_url %>" method="POST">
+    <label> Add to Todo List
+    <textarea name="todo[todo]" placeholder="Add your todo here..." cols="50" rows="20"></textarea>
+    </label>
+    <input type="submit" value="ADD TODO">
+</form>
+
